@@ -662,7 +662,8 @@ class EasyBlock(object):
                         if fetch_files:
                             src_path = self.obtain_file(src_fn, extension=True, urls=source_urls,
                                                         force_download=force_download,
-                                                        download_instructions=download_instructions)
+                                                        download_instructions=download_instructions,
+                                                        git_config=ext_options.get('git_config'))
                             if src_path:
                                 ext_src.update({'src': src_path})
                             else:
